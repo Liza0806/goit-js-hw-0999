@@ -548,7 +548,7 @@ function selectDate() {
         return;
     }
     //console.log(selectedDates)
-    //console.log(currentDate)
+    //console.log(currentDate)       
     setInterval(()=>{
         let ms = chosenDateObj - Date.now();
         //console.log(x);
@@ -561,18 +561,14 @@ function selectDate() {
     startBtn.removeAttribute("disabled");
 }
 function convertMs(ms) {
-    // Number of milliseconds per unit of time
     const second = 1000;
     const minute = second * 60;
     const hour = minute * 60;
     const day = hour * 24;
     // Remaining days
-    const days1 = pad(Math.floor(ms / day));
-    // Remaining hours
-    const hours1 = pad(Math.floor(ms % day / hour));
-    // Remaining minutes
-    const minutes1 = pad(Math.floor(ms % day % hour / minute));
-    // Remaining seconds
+    const days1 = pad(Math.floor(ms / day)); // Remaining hours
+    const hours1 = pad(Math.floor(ms % day / hour)); // Remaining minutes
+    const minutes1 = pad(Math.floor(ms % day % hour / minute)); // Remaining seconds
     const seconds1 = pad(Math.floor(ms % day % hour % minute / second));
     return {
         days: days1,
@@ -2772,6 +2768,6 @@ if (typeof Object.assign !== "function") Object.assign = function(target) {
     return target;
 };
 
-},{}],"eVN6V":[function() {},{}]},["8lKsl","1AWyZ"], "1AWyZ", "parcelRequired7c6")
+},{}],"eVN6V":[function() {},{}]},["8lKsl","1AWyZ"], "1AWyZ", "parcelRequire94c2")
 
 //# sourceMappingURL=02-timer.f9388f03.js.map
